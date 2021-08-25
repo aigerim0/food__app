@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
+ font-family: 'Besley', sans-serif;
 }
 a{
     color: black;
+    text-decoration: none;
 }
 .container{
     max-width: 1200px;
@@ -15,9 +16,53 @@ a{
 img{
     object-fit: contain;
 
+
 }
 .row{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
 }
+.card{
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+
+}
+.menu-title{
+text-align: center;
+    margin:10px 0 10px 0  ;
+}
+.menu-img{
+    object-fit: contain;
+    width: 100%;
+}
+.inCard{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: tan;
+}
+.inCard-allDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background-color: #fff;
+    border-radius: 25% ;
+    padding: 10px;
+}
+.inCard-allDiv p {
+    font-size: 14px;
+}
+
+.inCard-img{
+    height: 200px;
+    width: 200px;
+    border-radius: 20% ;
+}
+.inCard-imgDiv{
+    margin-right: 10px;
+}
+

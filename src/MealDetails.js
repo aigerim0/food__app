@@ -10,12 +10,18 @@ const MealDetails = () => {
             .then(({data}) => setMealDetails((data.find(item => item.id === mealParams.id))))
     }, [])
     return (
-        <div>
-            <img src={mealDetails.image} width='150'/>
-           <h4> {mealDetails.title}</h4>
-            <p>{mealDetails.description}</p>
-            <span>Price:{mealDetails.price}$</span>
-            <p>{mealDetails.inStock} </p>
+        <div className='inCard'>
+         <div className='inCard-allDiv'>
+           <div className='inCard-imgDiv'>
+               <img className='inCard-img' src={mealDetails.image} width='150'/>
+           </div>
+            <div>
+                <h4> {mealDetails.title}</h4>
+                <p>{mealDetails.description}</p>
+                <span>Price: {mealDetails.price}$</span>
+            </div>
+         </div>
+
         </div>
     )
 }

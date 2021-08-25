@@ -11,15 +11,20 @@ const Meals = () => {
     }, [])
     return (
         <div className='container'>
+            <h2 className='menu-title'>Menu</h2>
             <div className='row'>
                 {
                     meals.map(item =>
                         <div key={item.id} className='col-3'>
 
-                          <Link   to={`/meal/${item.id}`}>
-                              <img src={item.image} width='150' height='150'/>
-                              <div key={item.id}>{item.title}</div>
-                          </Link>
+                            <div className='card'>
+                                <Link to={`/meal/${item.id}`}>
+                                    <img className='menu-img' src={item.image} width='150' height='150'/>
+                                    <div className='card-title'>
+                                        <h5  key={item.id}>{item.title}</h5>
+                                    </div>
+                                </Link>
+                            </div>
 
                         </div>
                     )
