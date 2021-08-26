@@ -8,12 +8,12 @@ const MealDetails = () => {
     useEffect(() => {
         axios('https://gist.githubusercontent.com/juravlevdima/b239931140d1c3ae402a87b130f2caa6/raw/2aeee347830d20ec0720293d32905b0ae359526c/food.json')
             .then(({data}) => setMealDetails((data.find(item => item.id === mealParams.id))))
-    }, [])
+    }, [mealParams.id])
     return (
         <div className='inCard'>
          <div className='inCard-allDiv'>
            <div className='inCard-imgDiv'>
-               <img className='inCard-img' src={mealDetails.image} width='150'/>
+               <img className='inCard-img' alt='#' src={mealDetails.image} width='150'/>
            </div>
             <div>
                 <h4> {mealDetails.title}</h4>
